@@ -1,0 +1,59 @@
+﻿
+
+选择器
+
+找到dom元素
+document.getElementById();
+	$("#id")
+document.getElementsByClassName();
+	$(".className");
+document.getElementsByTagName();
+	$("div")
+
+firstChild
+firstElementChild
+	$("#div:first-child")
+nextSibling
+	$("#div").next();
+......
+parentNode
+parentNode.parentNode.parentNode.parentNode
+	$("div").parent()
+	$("span").parents("div")
+......
+
+修改操作
+	修改样式
+		node.style.color = "red";
+		node.style.fontSize = "18px";
+		$().css("color","red").css("font-size":"18px");
+		$().css("font-size","18px")	
+		$().css({"color":"red","font-size":"18px"});
+		node.style.display = "none";
+	修改属性
+		添加或修改属性
+		node.setAttribute("id", "div-1");
+		$().attr("id","div-1").attr({"lang":"zh-CN","title":"这是修改后的title"});
+			node.setAttribute("class", "panel");
+			node.className = "panel";
+		获取属性值
+		var className = node.getAttribute("class");
+		$().attr("class");
+		var className = node.className;
+		移除属性
+		node.removeAttribute("class");
+		$().removeAttr("class");
+		$().removeClass("show"); // class="panel show"
+	删除元素
+	添加元素
+	获取或修改值 <input type="text" value="">
+	node.value = "";
+	$().val("");
+	var val = node.value;
+	var $val = $().val();
+	内容 div
+	node.innerHTML = "";
+	$().html("");
+	var content = node.innerHTML;
+	var $content = $().html();
+	
