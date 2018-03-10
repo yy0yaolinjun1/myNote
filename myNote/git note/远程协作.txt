@@ -1,0 +1,48 @@
+git remote add origin git@github.com:yy0yaolinjun1/mydemo.git
+要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
+
+关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+
+此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+
+
+
+忽略文件：/文件名,/路径
+/* 忽略掉所有的分件
+！/(排除不需要忽略的文件)
+ 
+
+
+//拉取远程分支
+git pull origin master
+
+//拉取远程其它分支
+git fetch
+
+
+比较本地的仓库和远程参考的区别
+$ git log -p master.. origin/master
+把远程下载下来的代码合并到本地仓库，远程的和本地的合并
+$ git merge origin/master
+
+
+git tag <XXX> 版本号 打标签。。。
+命令git tag <name>用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+
+git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+
+git tag -s <tagname> -m "blablabla..."可以用PGP签名标签；
+
+命令git tag可以查看所有标签。
+
+
+命令git push origin <tagname>可以推送一个本地标签；
+
+命令git push origin --tags可以推送全部未推送过的本地标签；
+
+命令git tag -d <tagname>可以删除一个本地标签；
+
+命令git push origin :refs/tags/<tagname>可以删除一个远程标签。
+
+
+

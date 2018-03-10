@@ -1,0 +1,34 @@
+﻿// 初始配置
+git config --global color.ui true
+$ git config --global user.name "ylj"
+$ git config --global user.email "806860972@gmail.com"
+//init  初始仓库
+//创建git 库
+$ mkdir learngit
+$ cd learngit
+git init
+//查看状态
+git status
+//将某文件添加至暂存区
+git add Hello.java
+//将暂存区的所有文件提交至版本库
+git commit -m "提交至当前版本库"
+//查看历史记录
+git log
+//美化显示历史记录
+$ git log --pretty=oneline
+//回退到上一个版本
+git reset --hard HEAD^
+//回退到指定版本
+git reset --hard 版本号前7位
+//查看你的每一次命令
+git reflog
+//撤销工作区某文件的修改
+git checkout -- readme.txt
+//把暂存区的修改撤销掉
+git reset HEAD readme.txt
+场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。
+
+场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。
+
+场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
