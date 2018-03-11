@@ -1,0 +1,33 @@
+
+1. www.github.com 搜索 mybatis/mybatis
+
+2. 官方使用文档 http://www.mybatis.org/mybatis-3/zh/getting-started.html
+
+3. maven 
+	创建项目
+	导入mybatis
+	导入mysql jdbc驱动
+	pom.xml
+		build 节点下加下以下配置确保xml文件会被编译copy至classes目录
+		<resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+        </includes>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+	
+4. 创建
+	mybatis-config.xml 全局配置文件
+	
+	创建model或pojo
+		例如 对应数据库Account表的 Account实例
+	
+	创建AccountMapper.xml 映射配置文件
+		namespace 改为 AccountMapper 接口全路径
+	创建AccountMapper 接口
+	
+	在mybatis-config.xml 配置文件 mappers 节点中加入 AccountMapper.xml映射文件路径
+	

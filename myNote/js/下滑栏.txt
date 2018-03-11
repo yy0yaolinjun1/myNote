@@ -1,0 +1,27 @@
+$(function(){
+
+		$('.tabs a').click(function(){
+			
+			var $this=$(this);
+			$('.panel').hide();
+			$('.tabs a.active').removeClass('active');
+			$this.addClass('active').blur();
+			var panel=$this.attr("href");
+			$(panel).show();				
+			return fasle;  //告诉浏览器  不要纸箱这个链接
+			})//end click
+			
+			
+			$(".tabs li:first a").click()   //web 浏览器，单击第一个标签吧
+	
+   /*<div class="tabbedPanels">
+        <ul class="tabs">
+            <li><a href="#panel01">商品详情</a></li>
+            <li><a href="#panel02" class="active">累计评价</a></li>
+            <li><a href="#panel03">商品推荐</a></li>
+        </ul>
+		
+
+
+        
+		})//end ready
